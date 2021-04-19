@@ -1,7 +1,7 @@
 
 /*A object called quiz that is constructed after passing in a questions variable*/
 var quiz = function(questions){
-    this.name = "";
+    //this.name = "";
     this.score = 0;
     this.questions = questions;
     this.questionIndex = 0;
@@ -183,11 +183,11 @@ var resetQuiz = function() {
 
 
 var clockTick = function() {
-    if (timeEl > 1) {
+    if (timeEl > 0) {
         timeLeft.textContent = timeEl;
         timeEl--
     }
-    else {
+    else if (timeEl == 0){
         timerEl.textContent = "00";
         
         saveScores();
