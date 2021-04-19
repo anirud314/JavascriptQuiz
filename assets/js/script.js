@@ -183,7 +183,7 @@ var resetQuiz = function() {
 
 
 var clockTick = function() {
-    if (timeEl > 0) {
+    if (timeEl >= 0) {
         timeLeft.textContent = timeEl;
         timeEl--
     }
